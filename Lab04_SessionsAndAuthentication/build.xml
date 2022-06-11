@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="Lab05_SessionsAndAuthentication" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Lab05_SessionsAndAuthentication.</description>
+<project name="Lab05_MyLogin" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Lab05_MyLogin.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
