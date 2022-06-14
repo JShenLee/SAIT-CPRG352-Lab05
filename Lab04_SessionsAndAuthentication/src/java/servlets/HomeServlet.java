@@ -17,7 +17,7 @@ public class HomeServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         String username = (String) session.getAttribute("username");
-        
+
 //If trying to access /home without logging in, redirect to /login
         if (username == null || username.equals("")) {
             response.sendRedirect("login");
@@ -32,7 +32,6 @@ public class HomeServlet extends HttpServlet {
             session.invalidate();
             session = request.getSession();
         }
-
 
         //load the JSP
         getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);

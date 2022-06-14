@@ -33,6 +33,12 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
+        //successful logout message
+        if (operation != null && operation.equals("logout")) {
+            String message = "Successfully logged out!";
+            request.setAttribute("message", message);
+        }
+
         //load up the JSP
         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         return; //Stops the code call. VERY IMPORTANT.
@@ -48,7 +54,7 @@ public class LoginServlet extends HttpServlet {
         if (username == null || password == null || username.equals("") || password.equals("")) {
             String message = "Please enter a username or password.";
             request.setAttribute("message", message);
-            
+
         } else {
             // create AccountService and User objects.
             AccountService account = new AccountService();
